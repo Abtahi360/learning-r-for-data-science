@@ -67,3 +67,48 @@ print(mat[2:3, 2:3])
 mat[c(1, 3), c(1, 3)]
 
 
+
+# -----------------------------------------------
+# Final
+# -----------------------------------------------
+IQR(iris$Sepal.Length)
+
+quantile(iris$Sepal.Length, probs = c(0.25, 0.75))
+
+mean((iris$Sepal.Length))
+mean(iris$Sepal.Length[iris$Species == "setosa"])
+
+install.packages("dplyr")
+install.packages("tidyverse")
+library(dplyr)
+iris %>%
+  group_by(Species) %>%
+  summarise(
+    count = n(),
+    mean_sepal_length = mean(Sepal.Length)
+    sd_sepal_length = sd(Sepal.Length)
+    mean_petal_length = mean(Petal.Length)
+    sd_petal_length = sd(Petal.Length)
+  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
