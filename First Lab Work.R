@@ -85,9 +85,9 @@ iris %>%
   group_by(Species) %>%
   summarise(
     count = n(),
-    mean_sepal_length = mean(Sepal.Length)
-    sd_sepal_length = sd(Sepal.Length)
-    mean_petal_length = mean(Petal.Length)
+    mean_sepal_length = mean(Sepal.Length),
+    sd_sepal_length = sd(Sepal.Length),
+    mean_petal_length = mean(Petal.Length),
     sd_petal_length = sd(Petal.Length)
   )
 
