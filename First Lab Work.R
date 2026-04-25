@@ -92,9 +92,16 @@ iris %>%
   )
 
 
+# Day - 2
+mtcars
 
+install.packages("ggplot2")
+library(ggplot2)
 
-
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point() +
+  geom_smooth(method="lm", se=FALSE, color = "blue") + 
+  labs(title="HP vs MPG", x = "Horsepower", y = "Miles per gallon")
 
 
 
